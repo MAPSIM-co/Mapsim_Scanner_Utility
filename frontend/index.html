@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Reality & Clean IP Scanner</title>
+  
+</head>
+<body>
+
+  <h1>🔍 ابزار بررسی Reality و IPهای تمیز</h1>
+  <p id="user-ip-info" style="font-weight: bold; margin-bottom: 5px; color: #34495e;"></p>
+  <p id="ip-warning" style="margin-top: 0; font-size: 14px;"></p>
+
+  <h2>اسکن Reality (دامنه‌های مناسب)</h2>
+  <button id="load-domains-auto-btn">🚀 شروع اسکن خودکار دامنه</button>
+  <button id="cancel-auto-btn" disabled>❌ لغو اسکن</button>
+  
+
+  <h3>اسکن دستی دامنه‌ها (هر خط یک دامنه)</h3>
+  <textarea id="manual-domains-input" rows="7" placeholder="example.com&#10;google.com"></textarea><br />
+  <button id="load-domains-manual-btn">🛠️ اسکن دستی دامنه‌ها</button>
+
+  <hr />
+
+    <div id="ip-scan-settings" style="max-width: 400px; margin: 20px auto; direction: rtl;">
+      <div style="margin-bottom: 12px; text-align: center; font-weight: bold; font-size: 16px;">
+        اسکن IPهای تمیز (Fastly, Cloudflare, ...)
+      </div>
+    
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; align-items: center; margin-bottom: 12px;">
+        <label for="ip-type-select" style="min-width: 140px; text-align: right; font-weight: normal;">
+          نوع ارائه‌دهنده:
+        </label>
+        <select id="ip-type-select" style="flex-grow: 1; min-width: 150px; padding: 6px 8px; border-radius: 5px; border: 1px solid #ccc; direction: ltr;">
+          <option value="fastly">Fastly</option>
+          <option value="cloudflare">Cloudflare</option>
+          <!-- سایر گزینه‌ها اگر دارید -->
+        </select>
+      </div>
+    
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; align-items: center; margin-bottom: 12px;">
+        <label for="ip-count-input" style="min-width: 140px; text-align: right; font-weight: normal;">
+          تعداد IP تمیز مورد نیاز:
+        </label>
+        <input type="number" id="ip-count-input" min="1" max="100" value="2" style="flex-grow: 1; min-width: 80px; padding: 6px 8px; border-radius: 5px; border: 1px solid #ccc;" />
+      </div>
+    
+      <label class="checkbox-label" for="use-tls-check" style="display: flex; justify-content: center; margin-bottom: 20px; font-weight: normal; gap: 8px;">
+        <input type="checkbox" id="use-tls-check" checked style="transform: scale(1.2); cursor: pointer;" />
+        بررسی سازگاری TLS SNI (توصیه‌شده)
+      </label>
+    </div>
+    
+    
+
+    <button id="load-ips-auto-btn">🚀 شروع اسکن IP خودکار</button>
+    <button id="cancel-ip-auto-btn" disabled>❌ لغو اسکن</button>
+    
+
+    <h3>اسکن دستی IPها (هر خط یک IP)</h3>
+    <textarea id="manual-ips-input" rows="7" placeholder="1.1.1.1&#10;104.16.123.45"></textarea>
+    <button id="load-ips-manual-btn">🛠️ اسکن دستی IP</button>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>لیست دامنه‌ها یا IPهای پاک یافته</h2>
+  
+    <p id="auto-status" style="display: none;">وضعیت Domain : آماده</p>
+    <p id="ip-status" style="display: none;">وضعیت ip : آماده</p>
+  
+    <div id="progress-container" style="width: 100%; background: #eee; border-radius: 10px; height: 20px; margin-bottom: 15px; display: none;">
+      <div id="progress-bar" style="height: 100%; width: 0%; background: #3498db; border-radius: 10px; transition: width 0.3s ease;"></div>
+    </div>
+    <p id="progress-percent" style="text-align: center; font-weight: bold; margin-top: -10px; margin-bottom: 15px; display: none;">0%</p>
+  
+    <h3>دامنه‌های پاک یافته</h3>
+    <ul id="domain-list">
+      <li>نتایج دامنه‌ها در اینجا نمایش داده می‌شود</li>
+    </ul>
+    <button id="download-clean-domains-btn" disabled>⬇️ دانلود دامنه‌ها</button>
+  
+    <h3>IPهای پاک یافته</h3>
+    <ul id="ip-list">
+      <li>نتایج IPها در اینجا نمایش داده می‌شود</li>
+    </ul>
+    <button id="download-clean-ips-btn" disabled>⬇️ دانلود IPها</button>
+  </section>
+  
+
+  <script src="app.js" defer></script>
+
+</body>
+</html>
