@@ -1,0 +1,43 @@
+[
+    {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/release/dlc.dat",
+      "enabled": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/reality.txt",
+      "enabled": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/v2fly/v2ray-core/master/reality/domain.txt",
+      "enabled": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt",
+      "enabled": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt",
+      "enabled": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Fndroid/clash-rules/release/reality.txt",
+      "enabled": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Fndroid/clash-rules/release/fastly.txt",
+      "enabled": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/eylandoo/reality-domain-list/main/domains.txt",
+      "enabled": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt",
+      "enabled": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/marco119/Free-Node-Merge/main/reality.txt",
+      "enabled": true
+    }
+  ]
+  
