@@ -1,5 +1,5 @@
-fastapi
-uvicorn
-httpx
-ipwhois
-pydantic
+fastapi>=0.95.0
+uvicorn[standard]>=0.22.0
+httpx>=0.24.0
+ipwhois>=1.0.0
+pydantic>=1.10.0
