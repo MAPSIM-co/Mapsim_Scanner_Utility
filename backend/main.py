@@ -24,6 +24,10 @@ app = FastAPI()
 async def root():
     return PlainTextResponse("Server is running", status_code=200)
 
+@app.api_route("/", methods=["GET", "HEAD"])
+async def root(response: Response):
+    return {"status": "OK"}
+
 # فعال‌سازی CORS برای کلاینت‌ها
 # Enable CORS for client access (should be restricted in production)
 app.add_middleware(
