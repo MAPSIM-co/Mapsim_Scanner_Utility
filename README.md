@@ -32,6 +32,14 @@ This utility helps detect clean internet resources unaffected by filtering (e.g.
 
 ---
 
+## Live Demo
+
+You can view a working demo of the project here:
+
+[Live Demo →](http://mapsim.sbs/Mapsim_Scanner_Utility/index.html)
+
+---
+
 ## 📦 Installation & Setup
 
 ### 1. Clone the repository
