@@ -1,5 +1,7 @@
 // متغیر پایه برای آدرس API (در صورت تغییر سرور کافی است فقط این را عوض کنید)
-const BASE_URL = "http://localhost:8000";
+//const BASE_URL = "http://localhost:8000";
+//برای استفاده local خط زیر را کامنت کنید و خط بالا را از کامنت خارج کنید
+const BASE_URL = "https://mapsim-scanner-utility.onrender.com";
 
 // انتخاب المان‌ها - دامنه‌ها
 const autoBtn = document.getElementById("load-domains-auto-btn");
