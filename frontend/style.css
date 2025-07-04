@@ -1,0 +1,196 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 15px;
+  background-color: #f9fafb;
+  color: #333;
+  direction: rtl; /* اضافه شده برای راست‌چین بودن کل صفحه */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+button {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  margin: 8px 4px 15px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+#auto-status,
+#ip-status {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #34495e;
+  text-align: center;
+}
+
+#domain-list {
+  list-style-type: none;
+  padding-left: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+}
+
+#domain-list li {
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+  font-family: monospace;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+#domain-list li:last-child {
+  border-bottom: none;
+}
+
+#ip-list {
+  list-style-type: none;
+  padding-left: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+}
+
+#ip-list li {
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+  font-family: monospace;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+#ip-list li:last-child {
+  border-bottom: none;
+}
+
+#progress-container {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 10px;
+  height: 20px;
+  margin-bottom: 15px;
+  display: none;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #3498db;
+  border-radius: 10px 0 0 10px;
+  transition: width 0.3s ease;
+}
+
+#progress-percent {
+  text-align: center;
+  font-weight: bold;
+  margin-top: -18px;
+  margin-bottom: 15px;
+  color: #34495e;
+  display: none;
+  user-select: none;
+}
+
+/* وضعیت IP بخش بالا */
+#user-ip-info {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #2d3436;
+  font-size: 15px;
+  text-align: center;
+}
+
+#ip-warning {
+  color: orange;
+  font-weight: bold;
+  margin-top: -6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* عنوان‌ها برای زیرمجموعه‌ها */
+h2, h3 {
+  color: #2c3e50;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* انتخاب‌گر نوع سرویس‌دهنده IP */
+select#ip-type-select {
+  padding: 7px 12px;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  direction: ltr; /* برای نمایش صحیح آی‌پی‌ها و نام providers */
+}
+
+/* هماهنگی بهتر برای responsive */
+@media screen and (max-width: 600px) {
+  button {
+      width: 100%;
+      margin: 8px 0;
+  }
+
+  textarea {
+      font-size: 13px;
+  }
+}
+
+label.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #333;
+  user-select: none;
+}
+label.checkbox-label input[type="checkbox"] {
+  transform: scale(1.2);
+  margin: 0;
+  cursor: pointer;
+}
+
