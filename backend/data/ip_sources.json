@@ -1,0 +1,23 @@
+[
+    {
+      "url": "https://raw.githubusercontent.com/MortezaBashsiz/CFScanner/main/python/src/fastly/fastly-ips-v4.txt",
+      "enabled": true,
+      "provider": "fastly"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/MortezaBashsiz/CFScanner/main/python/src/fastly/fastly-ips-v6.txt",
+      "enabled": true,
+      "provider": "fastly"
+    },
+    {
+      "url": "https://www.cloudflare.com/ips-v4",
+      "enabled": true,
+      "provider": "cloudflare"
+    },
+    {
+      "url": "https://www.cloudflare.com/ips-v6",
+      "enabled": true,
+      "provider": "cloudflare"
+    }
+  ]
+  
